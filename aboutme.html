@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="scroll-restoration" content="manual">
+  <meta charset="UTF-8">
+  <title>About Me - Fatima Laraib</title>
+  <link href="https://fonts.googleapis.com/css2?family=Minecraft&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="aboutme.css">
+</head>
+<body>
+
+  <div id="preloader">
+    <img src="https://static.vecteezy.com/system/resources/previews/047/428/234/non_2x/old-pirate-ship-steering-wheel-on-transparent-background-free-png.png" alt="Loading..." />
+  </div>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="homepage.html">Home</a></li>
+      <li><a href="#" class="active">About Me</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="#">Skills</a></li>
+
+    </ul>
+  </nav>
+
+  <div class="about-section" id="me" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>My name is Fatima Laraib, some call me cuckoo, and some call me Einstein. To some I'm a daughter, to some a sister or friend, to you I'm at your service. I believe that education is very valuable, but now the time has come for innovation and creativity. I know that I am a creative individual and have been since my childhood. I look forward to using my creativity and skills to help you and your projects flourish.</p>
+  </div>
+
+  <div class="about-section" id="hobbies" data-aos="fade-up" data-aos-delay="100">
+    <h2>My Hobbies</h2>
+    <p>Coding, art, teaching and creating are my hobbies. Sometimes that creativity comes in the form of cooking, and sometimes it comes in the form of coding and design. It also helps me analyse situations with a new perspective, often asking questions that others might miss.</p>
+  </div>
+
+  <div class="about-section" id="ambitions" data-aos="fade-up" data-aos-delay="200">
+    <h2>My Ambitions</h2>
+    <p>As for my ambitions, I have a few. The first to somehow be helpful to anyone. It's been a life-long goal of mine, which I fulfil through teaching my friends. But I want to use my knowledge and skills to help more people, animals and the environment. Basically, make the world a less scary place.</p>
+  </div>
+  <div class="dialogue-box" id="krabbyBox">
+      <img src="https://static.vecteezy.com/system/resources/thumbnails/042/899/964/small_2x/vibrant-pixelated-art-parrot-concept-png.png" alt="Sir Krabby" class="crab" />
+      <div class="dialogue-text" id="dialogue">
+        Learn more about her here!
+        <div class="signature">- Miss Patty</div>
+      </div>
+      <button class="next-btn" onclick="nextDialogue()">Next</button>
+    </div>
+<div class="about-section" id="ambitions" data-aos="fade-up" data-aos-delay="200">
+    <h2>Get In Touch</h2>
+    <button class="treasure-button" onclick="toggleLinks()">
+        <img src="https://png.pngtree.com/png-vector/20250523/ourmid/pngtree-pixel-art-treasure-chest-graphic-vector-png-image_16365951.png" class="treasure" alt="Treasure Chest">
+    </button>
+    <div class="contact-links" id="contactLinks">
+        <a href="https://www.linkedin.com/in/fatima-laraib-620273318/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/YOUR_USERNAME" target="_blank">GitHub</a>
+        <a href="mailto:fatimalaraib06@email.com">Email</a>
+        <!-- Add more as needed -->
+    </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    let shown = false;
+    function toggleLinks() {
+        const box = document.getElementById("contactLinks");
+        shown = !shown;
+        box.style.display = shown ? "flex" : "none";
+    }
+    const dialogues = [
+        "Learn more about her here!",
+        "To learn more about her work, check out projects and experience.",
+        "And for academic checkpoints, check certifications."
+        ];
+
+        let dialogueIndex = 0;
+
+        function nextDialogue() {
+        dialogueIndex++;
+
+        if (dialogueIndex < dialogues.length) {
+            document.getElementById("dialogue").innerHTML =
+            `${dialogues[dialogueIndex]}<div class='signature'>- Miss Patty</div>`;
+        } else {
+            document.querySelector(".dialogue-box").classList.add("fade-out");
+            
+        }
+    }
+    // Delay to simulate load
+    window.addEventListener("load", function () {
+      setTimeout(() => {
+        document.body.classList.add("loaded");
+      }, 500); // Show wheel for 0.5s after load
+    });
+    AOS.init({
+      once: true,
+      delay: 0,
+      duration: 800,
+      offset: 100,
+    });
+  </script>
+</body>
+</html>
