@@ -32,13 +32,41 @@
   </div>
 
   <div class="about-section" id="hobbies" data-aos="fade-up" data-aos-delay="100">
-    <h2>Certifications From Coursera</h2>
-    <p>Following are some certifications that I have obtained by taking classes on coursera.</p>
+    <h2>Certificates</h2>
+    <p>Following are some certifications that I have obtained.</p>
+    <div class="cert-gallery">
+      <div class="cert-item">
+        <img src="AI certificate.png" alt="AI Certificate" class="cert-img" onclick="openModal(this)" />
+        <p class="cert-label">AI Certificate</p>
+      </div>
+      <div class="cert-item">
+        <img src="IBM certificate.png" alt="IBM Certificate" class="cert-img" onclick="openModal(this)" />
+        <p class="cert-label">IBM Certificate</p>
+      </div>
+      <div class="cert-item">
+        <img src="Edeviser certificate.png" alt="Edeviser Certificate" class="cert-img" onclick="openModal(this)" />
+        <p class="cert-label">Edeviser Certificate</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div class="cert-modal" id="certModal" onclick="closeModal()">
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+    <img class="modal-img" id="modalImg" src="" alt="Certificate" />
   </div>
 
   <div class="about-section" id="ambitions" data-aos="fade-up" data-aos-delay="200">
     <h2>Scholastic Honors Awards</h2>
     <p>Following are some other certifications that I recieved from my university for academic excellence.</p>
+    <ul class="honors-list">
+      <li>🏅 Dean's List — Semester 1</li>
+      <li>🏅 Dean's List — Semester 2</li>
+      <li>🏆 Rector's List — Semester 1</li>
+      <li>🥇 Gold Medalist — Semester 1</li>
+      <li>🥇 Gold Medalist — Semester 2</li>
+      <li>🥇 Gold Medalist — Semester 3</li>
+    </ul>
   </div>
   <div class="dialogue-box" id="krabbyBox">
       <img src="https://static.vecteezy.com/system/resources/previews/027/517/331/non_2x/pixel-cartoon-white-duck-character-illustration-png.png" alt="Sir Krabby" class="crab" />
@@ -61,7 +89,92 @@
     </div>
 </div>
 
+  <style>
+    .cert-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin-top: 1rem;
+      justify-content: center;
+    }
+    .cert-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .cert-img {
+      width: 220px;
+      height: 155px;
+      object-fit: cover;
+      border: 2px solid #aaa;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      image-rendering: pixelated;
+    }
+    .cert-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+    .cert-label {
+      font-size: 0.85rem;
+      text-align: center;
+    }
+    .cert-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    .cert-modal.open {
+      display: flex;
+    }
+    .modal-img {
+      max-width: 90vw;
+      max-height: 85vh;
+      border-radius: 6px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+      cursor: default;
+    }
+    .modal-close {
+      position: fixed;
+      top: 1.2rem;
+      right: 1.8rem;
+      font-size: 2.2rem;
+      color: #fff;
+      cursor: pointer;
+      line-height: 1;
+      z-index: 10000;
+    }
+    .honors-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .honors-list li {
+      font-size: 1rem;
+      padding: 0.3rem 0;
+    }
+  </style>
+
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    function openModal(img) {
+      document.getElementById('modalImg').src = img.src;
+      document.getElementById('certModal').classList.add('open');
+    }
+    function closeModal() {
+      document.getElementById('certModal').classList.remove('open');
+    }
+  </script>
   <script>
     let shown = false;
     function toggleLinks() {
