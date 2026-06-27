@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="scroll-restoration" content="manual">
+  <meta charset="UTF-8">
+  <title>Skills - Fatima Laraib</title>
+  <link href="https://fonts.googleapis.com/css2?family=Minecraft&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="aboutme.css">
+  <style>
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.8rem;
+    }
+    .skill-tag {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1.5px solid rgba(255,255,255,0.25);
+      border-radius: 4px;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.88rem;
+      letter-spacing: 0.03em;
+      transition: background 0.2s, border-color 0.2s, transform 0.15s;
+      cursor: default;
+    }
+    .skill-tag:hover {
+      background: rgba(255,255,255,0.18);
+      border-color: rgba(255,255,255,0.6);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <div id="preloader">
+    <img src="https://static.vecteezy.com/system/resources/previews/047/428/234/non_2x/old-pirate-ship-steering-wheel-on-transparent-background-free-png.png" alt="Loading..." />
+  </div>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="homepage.html">Home</a></li>
+      <li><a href="aboutme.html">About Me</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="#" class="active">Skills</a></li>
+    </ul>
+  </nav>
+
+  <!-- Core Technical Skills -->
+  <div class="about-section" data-aos="fade-up">
+    <h2>Core Technical Skills</h2>
+    <div class="skills-grid">
+      <span class="skill-tag">Python</span>
+      <span class="skill-tag">SQL</span>
+      <span class="skill-tag">Data Cleaning &amp; Preprocessing</span>
+      <span class="skill-tag">Exploratory Data Analysis (EDA)</span>
+      <span class="skill-tag">Data Visualization</span>
+      <span class="skill-tag">Statistics</span>
+      <span class="skill-tag">Machine Learning Fundamentals</span>
+      <span class="skill-tag">API Integration</span>
+      <span class="skill-tag">AI Algorithms</span>
+    </div>
+  </div>
+
+  <!-- Python Libraries -->
+  <div class="about-section" data-aos="fade-up" data-aos-delay="100">
+    <h2>Python Libraries</h2>
+    <div class="skills-grid">
+      <span class="skill-tag">Pandas</span>
+      <span class="skill-tag">NumPy</span>
+      <span class="skill-tag">Matplotlib</span>
+      <span class="skill-tag">Scikit-learn</span>
+      <span class="skill-tag">TensorFlow</span>
+      <span class="skill-tag">Pinecone</span>
+      <span class="skill-tag">MongoDB Client</span>
+    </div>
+  </div>
+
+  <!-- Databases -->
+  <div class="about-section" data-aos="fade-up" data-aos-delay="200">
+    <h2>Databases</h2>
+    <div class="skills-grid">
+      <span class="skill-tag">MongoDB</span>
+      <span class="skill-tag">MySQL / PostgreSQL</span>
+      <span class="skill-tag">Basic Database Design</span>
+    </div>
+  </div>
+
+  <!-- Software & Tools -->
+  <div class="about-section" data-aos="fade-up" data-aos-delay="300">
+    <h2>Software &amp; Tools</h2>
+    <div class="skills-grid">
+      <span class="skill-tag">Git</span>
+      <span class="skill-tag">GitHub</span>
+      <span class="skill-tag">Jupyter Notebook</span>
+      <span class="skill-tag">VS Code</span>
+      <span class="skill-tag">Aiven</span>
+      <span class="skill-tag">TiDB</span>
+      <span class="skill-tag">Pinecone</span>
+      <span class="skill-tag">MongoDB</span>
+      <span class="skill-tag">Vercel</span>
+    </div>
+  </div>
+
+  <!-- Soft Skills -->
+  <div class="about-section" data-aos="fade-up" data-aos-delay="400">
+    <h2>Soft Skills</h2>
+    <div class="skills-grid">
+      <span class="skill-tag">Problem Solving</span>
+      <span class="skill-tag">Communication</span>
+      <span class="skill-tag">Presentation Skills</span>
+      <span class="skill-tag">Teamwork</span>
+      <span class="skill-tag">Technical Documentation</span>
+    </div>
+  </div>
+
+  <!-- Dialogue box -->
+  <div class="dialogue-box" id="krabbyBox">
+    <img src="https://static.vecteezy.com/system/resources/previews/027/517/331/non_2x/pixel-cartoon-white-duck-character-illustration-png.png" alt="Mr Dook" class="crab" />
+    <div class="dialogue-text" id="dialogue">
+      Fatima has been building her skills through coursework, projects, and self-study.
+      <div class="signature">- Mr Dook</div>
+    </div>
+    <button class="next-btn" onclick="nextDialogue()">Next</button>
+  </div>
+
+  <!-- Get In Touch -->
+  <div class="about-section" data-aos="fade-up" data-aos-delay="500">
+    <h2>Get In Touch</h2>
+    <button class="treasure-button" onclick="toggleLinks()">
+      <img src="https://png.pngtree.com/png-vector/20250523/ourmid/pngtree-pixel-art-treasure-chest-graphic-vector-png-image_16365951.png" class="treasure" alt="Treasure Chest">
+    </button>
+    <div class="contact-links" id="contactLinks">
+      <a href="https://www.linkedin.com/in/fatima-laraib-620273318/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/YOUR_USERNAME" target="_blank">GitHub</a>
+      <a href="mailto:fatimalaraib06@email.com">Email</a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    let shown = false;
+    function toggleLinks() {
+      const box = document.getElementById("contactLinks");
+      shown = !shown;
+      box.style.display = shown ? "flex" : "none";
+    }
+
+    const dialogues = [
+      "Fatima has been building her skills through coursework, projects, and self-study.",
+      "She specialises in Python, data science, and machine learning.",
+      "She's always learning something new!"
+    ];
+    let dialogueIndex = 0;
+    function nextDialogue() {
+      dialogueIndex++;
+      if (dialogueIndex < dialogues.length) {
+        document.getElementById("dialogue").innerHTML =
+          `${dialogues[dialogueIndex]}<div class='signature'>- Mr Dook</div>`;
+      } else {
+        document.querySelector(".dialogue-box").classList.add("fade-out");
+      }
+    }
+
+    window.addEventListener("load", function () {
+      setTimeout(() => {
+        document.body.classList.add("loaded");
+      }, 500);
+    });
+
+    AOS.init({
+      once: true,
+      delay: 0,
+      duration: 800,
+      offset: 100,
+    });
+  </script>
+</body>
+</html>
